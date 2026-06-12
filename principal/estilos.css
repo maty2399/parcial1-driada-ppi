@@ -1,1 +1,341 @@
+/* ================================================
+   Driada Dietética y Herboristería
+   Hoja de estilos compartida — parcial 1 PPI 2026
+   ================================================ */
 
+/* ----------------
+   VARIABLES DE COLOR
+   ---------------- */
+:root {
+  --verde-bosque:  #3a5a40;
+  --verde-oliva:   #6a8f5e;
+  --crema:         #f5ede0;
+  --marron:        #8b5e3c;
+  --dorado:        #c8a96e;
+  --verde-oscuro:  #1f3320;
+  --texto-oscuro:  #2b2318;
+  --texto-suave:   #6b5744;
+  --blanco:        #fffdf9;
+}
+
+/* ----------------
+   BASE
+   ---------------- */
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--blanco);
+  color: var(--texto-oscuro);
+  
+}
+
+/* ----------------
+   NAVBAR
+   ---------------- */
+.driada-nav {
+  background-color: var(--verde-oscuro) !important;
+  border-bottom: 2px solid var(--verde-bosque);
+}
+
+.driada-brand {
+  color: var(--crema) !important;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+.driada-link {
+  color: var(--dorado) !important;
+  font-weight: 500;
+  padding: 6px 14px !important;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Hover en links del nav */
+.driada-link:hover,
+.driada-link.active {
+  color: var(--crema) !important;
+  background-color: var(--verde-bosque);
+}
+
+.driada-toggler {
+  border-color: var(--dorado) !important;
+}
+
+/* ----------------
+   HERO
+   ---------------- */
+.driada-hero {
+  background-color: var(--verde-bosque);
+  padding: 80px 0 70px;
+}
+
+.driada-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dorado);
+  margin-bottom: 1rem;
+}
+
+.driada-hero-titulo {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--crema);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.driada-hero-sub {
+  font-size: 1rem;
+  color: #b8d4b0;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ----------------
+   BOTONES
+   Hover requerido por la rúbrica
+   ---------------- */
+.driada-btn-primario {
+  background-color: var(--marron);
+  color: var(--crema);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.driada-btn-primario:hover {
+  background-color: #6e4a2e;
+  color: var(--crema);
+  transform: translateY(-2px);
+}
+
+.driada-btn-secundario {
+  background-color: transparent;
+  color: var(--crema);
+  border: 2px solid var(--crema);
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.driada-btn-secundario:hover {
+  background-color: var(--crema);
+  color: var(--verde-bosque);
+}
+
+/* ----------------
+   SECCIONES
+   ---------------- */
+.driada-seccion {
+  padding: 60px 0;
+  background-color: var(--blanco);
+}
+
+.driada-seccion-crema {
+  background-color: var(--crema);
+}
+
+.driada-titulo-seccion {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--verde-bosque);
+  margin-bottom: 0.5rem;
+}
+
+.driada-texto-suave {
+  color: var(--texto-suave);
+}
+
+/* ----------------
+   CARRUSEL
+   ---------------- */
+.driada-carousel {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.driada-slide {
+  background-color: var(--verde-bosque);
+  height: 320px;
+  padding: 2rem;
+}
+
+.driada-slide-icono {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.driada-slide-titulo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--crema);
+  margin-bottom: 0.5rem;
+}
+
+.driada-slide-texto {
+  font-size: 0.95rem;
+  color: #b8d4b0;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ----------------
+   TARJETAS
+   ---------------- */
+.driada-card {
+  background-color: var(--blanco);
+  border: 1px solid #ddd6c8;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  height: 100%;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.driada-card:hover {
+  border-color: var(--verde-oliva);
+  transform: translateY(-4px);
+}
+
+.driada-card-icono {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.driada-card-titulo {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--verde-bosque);
+  margin-bottom: 0.5rem;
+}
+
+.driada-card-texto {
+  font-size: 0.88rem;
+  color: var(--texto-suave);
+  margin-bottom: 1rem;
+}
+
+/* Hover en enlace de tarjeta */
+.driada-link-card {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--marron);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.driada-link-card:hover {
+  color: var(--verde-bosque);
+  text-decoration: underline;
+}
+
+/* ----------------
+   MODAL
+   ---------------- */
+.driada-modal {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.driada-modal-header {
+  background-color: var(--verde-bosque);
+  color: var(--crema);
+}
+
+.driada-modal-header .modal-title {
+  color: var(--crema);
+}
+
+/* ----------------
+   FORMULARIO (hover requerido por rúbrica)
+   ---------------- */
+input:hover, select:hover, textarea:hover {
+  border-color: var(--verde-oliva) !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--verde-bosque) !important;
+  box-shadow: 0 0 0 3px rgba(58, 90, 64, 0.2) !important;
+  outline: none;
+}
+
+/* ----------------
+   ANIMACIÓN — fade in al cargar
+   ---------------- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.driada-hero .container {
+  animation: fadeInUp 0.6s ease both;
+}
+
+/* ----------------
+   FOOTER
+   ---------------- */
+.driada-footer {
+  background-color: var(--verde-oscuro);
+  padding: 50px 0 30px;
+  color: var(--crema);
+}
+
+.driada-footer-marca {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--crema);
+  margin-bottom: 0.5rem;
+}
+
+.driada-footer-titulo {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--dorado);
+  margin-bottom: 0.75rem;
+}
+
+.driada-footer-texto {
+  font-size: 0.88rem;
+  color: #a8c4a2;
+}
+
+/* Hover en links del footer */
+.driada-footer-link {
+  font-size: 0.88rem;
+  color: #a8c4a2;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.driada-footer-link:hover {
+  color: var(--dorado);
+}
+
+.driada-footer-hr {
+  border-color: var(--verde-bosque);
+  margin: 2rem 0 1rem;
+}
+
+.driada-footer-copy {
+  font-size: 0.8rem;
+  color: #6a8f5e;
+}
+
+/* ----------------
+   RESPONSIVE
+   ---------------- */
+@media (max-width: 768px) {
+  .driada-hero-titulo { font-size: 2rem; }
+  .driada-slide { height: 260px; }
+}
