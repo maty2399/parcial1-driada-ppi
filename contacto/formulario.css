@@ -1,1 +1,207 @@
+/* ==========================================================================
+   Variables Globales (Paleta de colores inspirada en la naturaleza)
+   ========================================================================== */
+:root {
+    --verde-bosque: #3a5a40;
+    --verde-oliva: #588157;
+    --verde-claro: #a3b18a;
+    --crema: #dad7cd;
+    --blanco-crema: #fffdf9;
+    --oscuro: #333333;
+}
 
+/* ==========================================================================
+   Estilos Generales de la Página
+   ========================================================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--blanco-crema);
+    color: var(--oscuro);
+}
+
+/* Contenedor principal con fondo sutil */
+.driada-seccion-crema {
+    background-color: #f4f1ea;
+    padding: 60px 0;
+}
+
+/* ==========================================================================
+   Barra de Navegación (Navbar) - ¡Corrección de Capas!
+   ========================================================================== */
+.driada-nav {
+    background-color: rgba(255, 255, 255, 0.98) !important;
+    border-bottom: 2px solid var(--crema);
+    /* CORRECCIÓN: El z-index alto asegura que el menú flote por ENCIMA 
+       de todo el contenido y no se mezcle con las letras del formulario.
+    */
+    z-index: 1030 !important; 
+    transition: all 0.3s ease;
+}
+
+.driada-brand {
+    font-weight: 700;
+    color: var(--verde-bosque) !important;
+    font-size: 1.3rem;
+}
+
+.driada-link {
+    color: var(--oscuro) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Efecto hover exigido en la rúbrica para los enlaces del menú */
+.driada-link:hover {
+    color: var(--verde-oliva) !important;
+}
+
+/* Estado activo de la página en la que está el usuario */
+.driada-link.active {
+    color: var(--verde-bosque) !important;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   Sección Hero (Encabezado de Bienvenida)
+   ========================================================================== */
+.driada-hero {
+    background-color: var(--verde-bosque);
+    /* CORRECCIÓN: Le damos un padding-top generoso para que el Navbar fijo 
+       no tape el título principal "Escribinos tu mensaje" al cargar la página.
+    */
+    padding: 100px 0 60px 0; 
+}
+
+.driada-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.85rem;
+    color: var(--verde-claro);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.driada-hero-titulo {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.driada-hero-sub {
+    color: #e9edc9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   La Tarjeta del Formulario (.driada-card)
+   ========================================================================== */
+.driada-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover en la tarjeta que le da interactividad */
+.driada-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(58, 90, 64, 0.1) !important;
+}
+
+/* ==========================================================================
+   Campos del Formulario (Inputs, Select y Textarea) + HOVERS y FOCUS
+   ========================================================================== */
+.form-control, .form-select {
+    border: 2px solid var(--crema);
+    border-radius: 8px;
+    color: var(--oscuro);
+    transition: all 0.25s ease-in-out;
+}
+
+/* Efecto :hover obligatorio para los inputs (cuando el mouse pasa por arriba) */
+.form-control:hover, .form-select:hover {
+    border-color: var(--verde-claro);
+}
+
+/* Efecto :focus obligatorio (cuando el usuario hace clic para escribir adentro) */
+.form-control:focus, .form-select:focus {
+    border-color: var(--verde-oliva);
+    box-shadow: 0 0 0 0.25rem rgba(88, 129, 87, 0.25);
+    background-color: #fff;
+}
+
+/* Estilo para los mensajes de error de Bootstrap */
+.invalid-feedback {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   Botón de Envío Primario
+   ========================================================================== */
+.driada-btn-primario {
+    background-color: var(--verde-bosque);
+    color: #ffffff;
+    border: none;
+    border-radius: 50px; /* Bordes completamente redondeados (estilo píldora) */
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+/* Efecto :hover y :focus obligatorio para el botón */
+.driada-btn-primario:hover, .driada-btn-primario:focus {
+    background-color: var(--verde-oliva);
+    color: #ffffff;
+    transform: scale(1.02); /* Se agranda un poquitito de forma fluida */
+    box-shadow: 0 4px 12px rgba(58, 90, 64, 0.3);
+}
+
+/* ==========================================================================
+   Pie de Página (Footer)
+   ========================================================================== */
+.driada-footer {
+    background-color: #212529;
+    color: #ced4da;
+    padding: 40px 0 20px 0;
+    font-size: 0.95rem;
+}
+
+.driada-footer-marca {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.driada-footer-titulo {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+}
+
+.driada-footer-link {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+/* Efecto hover para los enlaces del footer */
+.driada-footer-link:hover {
+    color: var(--verde-claro);
+}
+
+.driada-footer-hr {
+    border-top: 1px solid #343a40;
+    margin: 30px 0 20px 0;
+}
+
+.driada-footer-copy {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
