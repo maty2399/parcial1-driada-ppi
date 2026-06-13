@@ -1,82 +1,86 @@
 /* ==========================================================================
-   Variables Globales (Paleta de colores inspirada en la naturaleza)
+   Contacto — Driada Dietética
+   Paleta unificada con principal/estilos.css
    ========================================================================== */
+
+/* ----------------
+   VARIABLES (mismas que principal/estilos.css)
+   ---------------- */
 :root {
-    --verde-bosque: #3a5a40;
-    --verde-oliva: #588157;
-    --verde-claro: #a3b18a;
-    --crema: #dad7cd;
-    --blanco-crema: #fffdf9;
-    --oscuro: #333333;
+    --verde-bosque:  #3a5a40;
+    --verde-oliva:   #6a8f5e;
+    --crema:         #f5ede0;
+    --marron:        #8b5e3c;
+    --dorado:        #c8a96e;
+    --verde-oscuro:  #1f3320;
+    --texto-suave:   #6b5744;
+    --blanco:        #fffdf9;
 }
 
-/* ==========================================================================
-   Estilos Generales de la Página
-   ========================================================================== */
+/* ----------------
+   BASE
+   ---------------- */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--blanco-crema);
-    color: var(--oscuro);
+    background-color: var(--blanco);
+    color: #2b2318;
+    padding-top: 10px; /* deja espacio para el navbar fijo, igual que en principal */
 }
 
-/* Contenedor principal con fondo sutil */
 .driada-seccion-crema {
-    background-color: #f4f1ea;
+    background-color: var(--crema);
     padding: 60px 0;
 }
 
-/* ==========================================================================
-   Barra de Navegación (Navbar) - ¡Corrección de Capas!
-   ========================================================================== */
+/* ----------------
+   NAVBAR (igual al de principal: verde oscuro fijo)
+   ---------------- */
 .driada-nav {
-    background-color: rgba(255, 255, 255, 0.98) !important;
-    border-bottom: 2px solid var(--crema);
-    /* CORRECCIÓN: El z-index alto asegura que el menú flote por ENCIMA 
-       de todo el contenido y no se mezcle con las letras del formulario.
-    */
-    z-index: 1030 !important; 
+    background-color: var(--verde-oscuro) !important;
+    border-bottom: 2px solid var(--verde-bosque);
+    z-index: 1030 !important;
     transition: all 0.3s ease;
 }
 
 .driada-brand {
     font-weight: 700;
-    color: var(--verde-bosque) !important;
-    font-size: 1.3rem;
+    color: var(--crema) !important;
+    font-size: 1.2rem;
+    letter-spacing: 0.02em;
 }
 
 .driada-link {
-    color: var(--oscuro) !important;
+    color: var(--dorado) !important;
     font-weight: 500;
-    transition: color 0.3s ease;
+    padding: 6px 14px !important;
+    border-radius: 6px;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 /* Efecto hover exigido en la rúbrica para los enlaces del menú */
-.driada-link:hover {
-    color: var(--verde-oliva) !important;
-}
-
-/* Estado activo de la página en la que está el usuario */
+.driada-link:hover,
 .driada-link.active {
-    color: var(--verde-bosque) !important;
-    font-weight: 700;
+    color: var(--crema) !important;
+    background-color: var(--verde-bosque);
 }
 
-/* ==========================================================================
-   Sección Hero (Encabezado de Bienvenida)
-   ========================================================================== */
+.driada-toggler {
+    border-color: var(--dorado) !important;
+}
+
+/* ----------------
+   HERO
+   ---------------- */
 .driada-hero {
     background-color: var(--verde-bosque);
-    /* CORRECCIÓN: Le damos un padding-top generoso para que el Navbar fijo 
-       no tape el título principal "Escribinos tu mensaje" al cargar la página.
-    */
-    padding: 100px 0 60px 0; 
+    padding: 80px 0 70px;
 }
 
 .driada-eyebrow {
     text-transform: uppercase;
-    letter-spacing: 0.15em;
-    font-size: 0.85rem;
-    color: var(--verde-claro);
+    letter-spacing: 0.12em;
+    font-size: 0.8rem;
+    color: var(--dorado);
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
@@ -84,124 +88,131 @@ body {
 .driada-hero-titulo {
     font-size: 2.5rem;
     font-weight: 700;
+    color: var(--crema);
 }
 
 .driada-hero-sub {
-    color: #e9edc9;
+    color: #b8d4b0;
     max-width: 600px;
     margin: 0 auto;
 }
 
-/* ==========================================================================
-   La Tarjeta del Formulario (.driada-card)
-   ========================================================================== */
+/* ----------------
+   TARJETA DEL FORMULARIO
+   ---------------- */
 .driada-card {
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    border-radius: 16px;
+    background: var(--blanco);
+    border: 1px solid #ddd6c8;
+    border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto hover en la tarjeta que le da interactividad */
+/* Efecto hover en la tarjeta */
 .driada-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(58, 90, 64, 0.1) !important;
+    box-shadow: 0 10px 20px rgba(58, 90, 64, 0.12) !important;
+    border-color: var(--verde-oliva);
 }
 
-/* ==========================================================================
-   Campos del Formulario (Inputs, Select y Textarea) + HOVERS y FOCUS
-   ========================================================================== */
+/* ----------------
+   CAMPOS DEL FORMULARIO — hover y focus
+   ---------------- */
 .form-control, .form-select {
-    border: 2px solid var(--crema);
+    border: 2px solid #ddd6c8;
     border-radius: 8px;
-    color: var(--oscuro);
+    color: #2b2318;
     transition: all 0.25s ease-in-out;
 }
 
-/* Efecto :hover obligatorio para los inputs (cuando el mouse pasa por arriba) */
+/* :hover obligatorio */
 .form-control:hover, .form-select:hover {
-    border-color: var(--verde-claro);
+    border-color: var(--verde-oliva);
 }
 
-/* Efecto :focus obligatorio (cuando el usuario hace clic para escribir adentro) */
+/* :focus obligatorio */
 .form-control:focus, .form-select:focus {
-    border-color: var(--verde-oliva);
-    box-shadow: 0 0 0 0.25rem rgba(88, 129, 87, 0.25);
+    border-color: var(--verde-bosque);
+    box-shadow: 0 0 0 0.25rem rgba(58, 90, 64, 0.2);
     background-color: #fff;
 }
 
-/* Estilo para los mensajes de error de Bootstrap */
 .invalid-feedback {
     font-size: 0.8rem;
     font-weight: 500;
+    color: var(--marron);
 }
 
-/* ==========================================================================
-   Botón de Envío Primario
-   ========================================================================== */
+/* ----------------
+   BOTÓN PRIMARIO (igual estilo que principal/estilos.css)
+   ---------------- */
 .driada-btn-primario {
-    background-color: var(--verde-bosque);
-    color: #ffffff;
+    background-color: var(--marron);
+    color: var(--crema);
     border: none;
-    border-radius: 50px; /* Bordes completamente redondeados (estilo píldora) */
+    border-radius: 6px;
     font-weight: 600;
-    letter-spacing: 0.05em;
-    transition: all 0.3s ease;
+    letter-spacing: 0.03em;
+    transition: background-color 0.2s, transform 0.15s, box-shadow 0.2s;
 }
 
-/* Efecto :hover y :focus obligatorio para el botón */
+/* :hover y :focus obligatorio */
 .driada-btn-primario:hover, .driada-btn-primario:focus {
-    background-color: var(--verde-oliva);
-    color: #ffffff;
-    transform: scale(1.02); /* Se agranda un poquitito de forma fluida */
-    box-shadow: 0 4px 12px rgba(58, 90, 64, 0.3);
+    background-color: #6e4a2e;
+    color: var(--crema);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 94, 60, 0.3);
 }
 
-/* ==========================================================================
-   Pie de Página (Footer)
-   ========================================================================== */
+/* ----------------
+   FOOTER (igual al de principal)
+   ---------------- */
 .driada-footer {
-    background-color: #212529;
-    color: #ced4da;
-    padding: 40px 0 20px 0;
+    background-color: var(--verde-oscuro);
+    padding: 50px 0 30px;
+    color: var(--crema);
     font-size: 0.95rem;
 }
 
 .driada-footer-marca {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 10px;
+    color: var(--crema);
+    margin-bottom: 0.5rem;
 }
 
 .driada-footer-titulo {
-    color: #ffffff;
-    font-weight: 600;
-    margin-bottom: 15px;
+    font-size: 0.75rem;
+    font-weight: 700;
     text-transform: uppercase;
-    font-size: 0.85rem;
     letter-spacing: 0.1em;
+    color: var(--dorado);
+    margin-bottom: 0.75rem;
+}
+
+.driada-footer-texto {
+    font-size: 0.88rem;
+    color: #a8c4a2;
 }
 
 .driada-footer-link {
-    color: #adb5bd;
+    color: #a8c4a2;
     text-decoration: none;
     transition: color 0.2s ease;
-    display: inline-block;
-    margin-bottom: 8px;
+    display: block;
+    margin-bottom: 4px;
 }
 
 /* Efecto hover para los enlaces del footer */
 .driada-footer-link:hover {
-    color: var(--verde-claro);
+    color: var(--dorado);
 }
 
 .driada-footer-hr {
-    border-top: 1px solid #343a40;
-    margin: 30px 0 20px 0;
+    border-color: var(--verde-bosque);
+    margin: 2rem 0 1rem;
 }
 
 .driada-footer-copy {
-    font-size: 0.85rem;
-    color: #6c757d;
+    font-size: 0.8rem;
+    color: #6a8f5e;
 }
