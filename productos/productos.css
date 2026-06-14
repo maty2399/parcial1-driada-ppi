@@ -1,1 +1,54 @@
+/* ==========================================================================
+   Productos — Driada Dietética
+   Estilos específicos de la página de productos
+   Importa también ../principal/estilos.css para navbar, footer y paleta
+   ========================================================================== */
 
+/* ----------------
+   CARDS DE PRODUCTO
+   Usamos <figure> como tag HTML5 requerido por la rúbrica
+   ---------------- */
+.driada-prod-card {
+  background-color: var(--blanco);
+  border: 1px solid #ddd6c8;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+/* :hover en las cards de producto */
+.driada-prod-card:hover {
+  border-color: var(--verde-oliva);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(58, 90, 64, 0.12);
+}
+
+/* Imagen del producto */
+.driada-prod-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Cuerpo de la card (figcaption) */
+.driada-prod-body {
+  padding: 1.25rem;
+}
+
+/* Título del producto */
+.driada-prod-titulo {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--verde-bosque);
+  margin-bottom: 0.4rem;
+}
+
+/* Descripción del producto */
+.driada-prod-texto {
+  font-size: 0.88rem;
+  color: var(--texto-suave);
+  margin-bottom: 0.75rem;
+}
