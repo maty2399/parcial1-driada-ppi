@@ -6,7 +6,7 @@ Prototipo web navegable desarrollado como Examen Parcial N° 1 de Práctica Prof
 
 | Integrante | Rol | GitHub |
 |---|---|---|
-| Matías Villegas | Programador / Líder técnico | [@maty2399](https://github.com/maty2399) |
+| Matías Villegas | Programador / Documentador| [@maty2399](https://github.com/maty2399) |
 | Gabriela Nieva | Programadora / Diseñadora | [@GabrielaN0](https://github.com/GabrielaN0) |
 | Daniela Pulin | Programadora / Documentadora | [@danielapulin](https://github.com/danielapulin) |
 
